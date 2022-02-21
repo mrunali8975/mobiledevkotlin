@@ -9,47 +9,42 @@
 
 import { View, Text, SafeAreaView, StatusBar,StyleSheet,ScrollView } from 'react-native'
 import React from 'react'
+import renderer from 'react-test-renderer';
+import ListData from './listdata';
+import ApiCall from './apicall'
+import Rnform from './rnform';
+import { NavigationContainer} from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import DetailPage from './detailPage';
+import Movieapp from './movieapp';
+
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  return (
-    <SafeAreaView style={page.container}>
-      <StatusBar barStyle={'light-content'}></StatusBar>
-      <ScrollView >
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-        <Text style={page.textcolor}> Hello </Text>
-      </ScrollView>
-    </SafeAreaView>
+  return(
+  
+     <NavigationContainer>{
+ <Stack.Navigator initialRouteName='Movieapp'
+ screenOptions={{
+  headerShown: false,
+}}
+ >
+ {/* <Stack.Screen name="Home" component={ApiCall} />
+ <Stack.Screen name="form" component={Rnform} /> */}
+ 
+ <Stack.Screen name="Movieapp" component={Movieapp} />
+ {/* <Stack.Screen name='movieapp' component={ListData}/> */}
+
+
+ </Stack.Navigator>      
+      
+      }</NavigationContainer>
+    
+     
+
+  
+  
   );
 };
 const page = StyleSheet.create({
