@@ -6,20 +6,26 @@
  * @flow strict-local
  */
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {SafeAreaView, StatusBar, Text} from 'react-native';
-import Header from "./header";
-import Discounts from "./discounts";
-import PriceDetails from "./priceDetails";
+import Cart from './src/Cart';
+import Homepage from './src/homepage';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <StatusBar barStyle={'dark-content'} />
-      <Header/>
-      <Discounts/>
-      <PriceDetails/>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Homepage"
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Home" component={Homepage} />
+        <Stack.Screen name="Cart" component={Cart} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

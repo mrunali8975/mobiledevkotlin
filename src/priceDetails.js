@@ -7,62 +7,60 @@ import {
   Pressable,
 } from 'react-native';
 import React from 'react';
-import supercoin from '/Users/user213309/flipkart/supercoin.png';
+import supercoin from './supercoin.png';
 
 export default function PriceDetails() {
   return (
-    <View style={{backgroundColor:'#fff'}} >
-      <ScrollView>
-        <View style={{backgroundColor:'#fff'}}>
-          <View>
-            <Text style={styles.pricedetailsheading}>Price Details</Text>
-          </View>
-          <View style={{marginTop:5}}>
-            <View style={styles.pricedetailsupper}>
-              <Text style={styles.pricetext}>Price(1 item) </Text>
-              <Text style={styles.pricetext}>$19,045 </Text>
-            </View>
-
-            <View style={styles.pricedetailsupper}>
-              <Text style={styles.pricetext}>Discount</Text>
-              <Text style={styles.pricetext}>$19,045</Text>
-            </View>
-            <View style={styles.pricedetailsupper}>
-              <Text style={styles.pricetext}>Delivery Charges</Text>
-              <Text style={styles.pricetext}>FREE</Text>
-            </View>
-          </View>
-          <View>
-            <View style={styles.totalamount}>
-              <Text style={styles.totalamouttext}>Total Amount</Text>
-              <Text style={styles.totalamouttext}>$19,045</Text>
-            </View>
+    <View style={{backgroundColor: '#fff'}}>
+      <View style={{backgroundColor: '#fff'}}>
+        <View>
+          <Text style={styles.pricedetailsheading}>Price Details</Text>
+        </View>
+        <View style={{marginTop: 5}}>
+          <View style={styles.pricedetailsupper}>
+            <Text style={styles.pricetext}>Price(1 item) </Text>
+            <Text style={styles.pricetext}>$19,045 </Text>
           </View>
 
-          <View style={{margin: 10}}>
-            <Text style={styles.greenText}>
-              You will save $5,046 on this order
-            </Text>
+          <View style={styles.pricedetailsupper}>
+            <Text style={styles.pricetext}>Discount</Text>
+            <Text style={styles.pricetext}>$19,045</Text>
           </View>
-          <View style={styles.pinkview}>
-            <Text style={styles.pinkviewtext}>
-              Save extra $238 usin 238 SuperCoins on the next step
-            </Text>
-            <View style={{flexDirection: 'row'}}>
-              <Text style={styles.pinkviewtext}>Balance:</Text>
-              <Image source={supercoin} style={styles.supercoin} />
-              <Text style={styles.pinkviewtext}> 214 </Text>
-            </View>
-          </View>
-
-          <View style={styles.safeArea}>
-            <Text style={styles.safeAreaText}>
-              Safe and secure payments.Easy returns.
-            </Text>
-            <Text style={styles.safeAreaText}>100% Authentic products </Text>
+          <View style={styles.pricedetailsupper}>
+            <Text style={styles.pricetext}>Delivery Charges</Text>
+            <Text style={styles.pricetext}>FREE</Text>
           </View>
         </View>
-      </ScrollView>
+        <View>
+          <View style={styles.totalamount}>
+            <Text style={styles.totalamouttext}>Total Amount</Text>
+            <Text style={styles.totalamouttext}>$19,045</Text>
+          </View>
+        </View>
+
+        <View style={{margin: 10}}>
+          <Text style={styles.greenText}>
+            You will save $5,046 on this order
+          </Text>
+        </View>
+        <View style={styles.pinkview}>
+          <Text style={styles.pinkviewtext}>
+            Save extra $238 usin 238 SuperCoins on the next step
+          </Text>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={styles.pinkviewtext}>Balance:</Text>
+            <Image source={supercoin} style={styles.supercoin} />
+            <Text style={styles.pinkviewtext}> 214 </Text>
+          </View>
+        </View>
+
+        <View style={styles.safeArea}>
+          <Text style={styles.safeAreaText}>
+            Safe and secure payments.Easy returns.
+          </Text>
+          <Text style={styles.safeAreaText}>100% Authentic products </Text>
+        </View>
+      </View>
       <View style={styles.bottomheader}>
         <View>
           <Text style={{fontWeight: 'bold', fontSize: 35, color: '#000'}}>
@@ -101,9 +99,11 @@ const styles = StyleSheet.create({
   },
   bottomheader: {
     flexDirection: 'row',
-    height: 'auto',
     justifyContent: 'space-between',
-    margin: 10,
+    
+    backgroundColor: '#fff',
+    width: '100%',
+    padding: 20,
   },
   safeArea: {
     backgroundColor: '#EBEDEF',
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   },
   pricedetailsheading: {
     margin: 10,
-    fontSize: 22,
+    fontSize: 16,
     color: '#999',
     fontWeight: 'bold',
     marginBottom: 10,
@@ -144,7 +144,8 @@ const styles = StyleSheet.create({
   pricedetailsupper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    margin: 10,
+    marginHorizontal: 10,
+    marginVertical: 5
   },
   totalamount: {
     flexDirection: 'row',
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
   pricetext: {
     fontWeight: '600',
 
-    fontSize: 20,
+    fontSize: 15,
     color: '#000',
   },
 });
