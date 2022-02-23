@@ -13,7 +13,7 @@ import Fourr from "./images/4.png";
 import Fivee from "./images/5.png";
 import Sixx from "./images/6.png";
 
-import { Searchbar } from 'react-native-paper';
+// import { Searchbar } from 'react-native-paper';
 
 export default function header() {
     const [searchQuery, setSearchQuery] = React.useState('');
@@ -34,13 +34,13 @@ export default function header() {
                 </View>
             </View>
             <View style={styles.topbar}>
-            <Searchbar
+            {/* <Searchbar
                 icon ={Search}
                 placeholder="Search For Products and More"
                 onChangeText={onChangeSearch}
                 value={searchQuery}
                 style={styles.searchbar}
-                />
+                /> */}
             </View>
         
         </View>
@@ -64,9 +64,9 @@ export default function header() {
               <Image source={Fourr} style={styles.shoplogo}/>
               </View>
 
-              <View style={styles.shopitemview}>
+              {/* <View style={styles.shopitemview}>
               <Image source={Fivee} style={styles.shoplogo}/>
-              </View>
+              </View> */}
 
               <View style={styles.shopitemview}>
               <Image source={Sixx} style={styles.shoplogo}/>
