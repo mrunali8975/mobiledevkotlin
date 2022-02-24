@@ -1,29 +1,25 @@
 
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
+import Cart from './src/Cart';
+import Homepage from './src/homepage';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import YellowView from './yellowView';
-
-
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  
   return (
-
-  <YellowView/>
-  
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Homepage"
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Home" component={Homepage} />
+        <Stack.Screen name="Cart" component={Cart} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-
 export default App;
