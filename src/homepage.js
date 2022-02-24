@@ -2,6 +2,7 @@ import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import Header from './header';
 import Discounts from './discounts';
+import YellowView from "./yellowView";
 
 export default function Homepage(props) {
   return (
@@ -9,6 +10,7 @@ export default function Homepage(props) {
       <Header navigation={props.navigation}/>
       <ScrollView>
         <Discounts />
+        <YellowView />
       </ScrollView>
     </View>
   );
