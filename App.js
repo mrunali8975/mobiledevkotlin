@@ -11,14 +11,15 @@ import { View, Text, SafeAreaView, StatusBar,StyleSheet,ScrollView } from 'react
 import React from 'react'
 import renderer from 'react-test-renderer';
 import ListData from './listdata';
-import ApiCall from './apicall'
+// import ApiCall from './apicall'
 import Rnform from './rnform';
 import { NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DetailPage from './detailPage';
 import Movieapp from './movieapp';
-
-
+import ApiCall from './apicallj';
+import Cart from './cart'
+import CategoryPage from './categoryPage'
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -33,8 +34,10 @@ const App = () => {
  {/* <Stack.Screen name="Home" component={ApiCall} />
  <Stack.Screen name="form" component={Rnform} /> */}
  
- <Stack.Screen name="Movieapp" component={Movieapp} />
- {/* <Stack.Screen name='movieapp' component={ListData}/> */}
+ <Stack.Screen name="ApiCall" component={ApiCall} />
+<Stack.Screen name="Cart" component={Cart} /> 
+
+  <Stack.Screen name='CategoryPage' component={CategoryPage}/> 
 
 
  </Stack.Navigator>      
