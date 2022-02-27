@@ -20,13 +20,15 @@ import Movieapp from './movieapp';
 import ApiCall from './apicallj';
 import Cart from './cart'
 import CategoryPage from './categoryPage'
+import  Login from './login'
+import Quiz from './quiz';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return(
   
      <NavigationContainer>{
- <Stack.Navigator initialRouteName='Movieapp'
+ <Stack.Navigator initialRouteName='Quiz'
  screenOptions={{
   headerShown: false,
 }}
@@ -38,6 +40,8 @@ const App = () => {
 <Stack.Screen name="Cart" component={Cart} /> 
 
   <Stack.Screen name='CategoryPage' component={CategoryPage}/> 
+  <Stack.Screen name='Login' component={Login}/> 
+  <Stack.Screen name='Quiz' component={Quiz}/> 
 
 
  </Stack.Navigator>      
